@@ -1,0 +1,9 @@
+F:\Repositories\GitRepos\LearningBlazor\MyFirstBlazorApp\Shared\bin\Debug\netstandard2.1\MyFirstBlazorApp.Shared.deps.json
+F:\Repositories\GitRepos\LearningBlazor\MyFirstBlazorApp\Shared\bin\Debug\netstandard2.1\MyFirstBlazorApp.Shared.dll
+F:\Repositories\GitRepos\LearningBlazor\MyFirstBlazorApp\Shared\bin\Debug\netstandard2.1\MyFirstBlazorApp.Shared.pdb
+F:\Repositories\GitRepos\LearningBlazor\MyFirstBlazorApp\Shared\obj\Debug\netstandard2.1\MyFirstBlazorApp.Shared.csprojAssemblyReference.cache
+F:\Repositories\GitRepos\LearningBlazor\MyFirstBlazorApp\Shared\obj\Debug\netstandard2.1\MyFirstBlazorApp.Shared.AssemblyInfoInputs.cache
+F:\Repositories\GitRepos\LearningBlazor\MyFirstBlazorApp\Shared\obj\Debug\netstandard2.1\MyFirstBlazorApp.Shared.AssemblyInfo.cs
+F:\Repositories\GitRepos\LearningBlazor\MyFirstBlazorApp\Shared\obj\Debug\netstandard2.1\MyFirstBlazorApp.Shared.csproj.CoreCompileInputs.cache
+F:\Repositories\GitRepos\LearningBlazor\MyFirstBlazorApp\Shared\obj\Debug\netstandard2.1\MyFirstBlazorApp.Shared.dll
+F:\Repositories\GitRepos\LearningBlazor\MyFirstBlazorApp\Shared\obj\Debug\netstandard2.1\MyFirstBlazorApp.Shared.pdb
