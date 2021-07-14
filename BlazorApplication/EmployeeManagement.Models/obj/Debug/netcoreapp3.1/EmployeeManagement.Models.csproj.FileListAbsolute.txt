@@ -1,7 +1,6 @@
 F:\Repositories\GitRepos\LearningBlazor\BlazorApplication\EmployeeManagement.Models\bin\Debug\netcoreapp3.1\EmployeeManagement.Models.deps.json
 F:\Repositories\GitRepos\LearningBlazor\BlazorApplication\EmployeeManagement.Models\bin\Debug\netcoreapp3.1\EmployeeManagement.Models.dll
 F:\Repositories\GitRepos\LearningBlazor\BlazorApplication\EmployeeManagement.Models\bin\Debug\netcoreapp3.1\EmployeeManagement.Models.pdb
-F:\Repositories\GitRepos\LearningBlazor\BlazorApplication\EmployeeManagement.Models\obj\Debug\netcoreapp3.1\EmployeeManagement.Models.csprojAssemblyReference.cache
 F:\Repositories\GitRepos\LearningBlazor\BlazorApplication\EmployeeManagement.Models\obj\Debug\netcoreapp3.1\EmployeeManagement.Models.AssemblyInfoInputs.cache
 F:\Repositories\GitRepos\LearningBlazor\BlazorApplication\EmployeeManagement.Models\obj\Debug\netcoreapp3.1\EmployeeManagement.Models.AssemblyInfo.cs
 F:\Repositories\GitRepos\LearningBlazor\BlazorApplication\EmployeeManagement.Models\obj\Debug\netcoreapp3.1\EmployeeManagement.Models.csproj.CoreCompileInputs.cache
