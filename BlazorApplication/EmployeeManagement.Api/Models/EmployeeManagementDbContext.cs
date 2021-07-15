@@ -7,9 +7,9 @@ using System.Threading.Tasks;
 
 namespace EmployeeManagement.Api.Models
 {
-    public class EmployeeDbContext: DbContext
+    public class EmployeeManagementDbContext: DbContext
     {
-        public EmployeeDbContext(DbContextOptions<EmployeeDbContext> options) : base(options)
+        public EmployeeManagementDbContext(DbContextOptions<EmployeeManagementDbContext> options) : base(options)
         {
 
         }
