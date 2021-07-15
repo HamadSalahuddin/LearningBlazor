@@ -8,13 +8,13 @@ bin
 
 #logs
 
-BlazorApplication/internallogs
-CompanyEmployees/logs
+
 
 #obj/Debug
 
 BlazorApplication/EmployeeManagement.Api/obj
-BlazorApplication/EmployeeManagement.Models/obj
+BlazorApplication/EmployeeManagement.Models/bin
 BlazorApplication/EmployeeManagement.Web/obj
 
 
+BlazorApplication/EmployeeManagement.Models/obj

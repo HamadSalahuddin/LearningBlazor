@@ -30,11 +30,7 @@ namespace EmployeeManagement.Web.Pages
                     Email= "hamadsalahuddin@gmail.com",
                     DateOfBirth = new DateTime(1980, 10, 5),
                     Gender = Gender.Male,
-                    Department = new Department
-                    {
-                        DepartmentId =1,
-                        DepartmentName = "IT"
-                    },
+                    DepartmentId = 1,
                     PhotoPath = "images/hamad.png"
                 },
                 new Employee
@@ -45,11 +41,7 @@ namespace EmployeeManagement.Web.Pages
                     Email= "sohailkhaliq@gmail.com",
                     DateOfBirth = new DateTime(1983, 10, 5),
                     Gender = Gender.Male,
-                    Department = new Department
-                    {
-                        DepartmentId =1,
-                        DepartmentName = "HR"
-                    },
+                    DepartmentId = 2,
                     PhotoPath = "images/sohail.png"
                 },
                 new Employee
@@ -60,11 +52,7 @@ namespace EmployeeManagement.Web.Pages
                     Email= "abidakram@gmail.com",
                     DateOfBirth = new DateTime(1983, 10, 5),
                     Gender = Gender.Male,
-                    Department = new Department
-                    {
-                        DepartmentId =1,
-                        DepartmentName = "QA"
-                    },
+                    DepartmentId =1,
                     PhotoPath = "images/abid.jpg"
                 },new Employee
                 {
@@ -74,11 +62,7 @@ namespace EmployeeManagement.Web.Pages
                     Email= "waseemmaroof@gmail.com",
                     DateOfBirth = new DateTime(1984, 10, 5),
                     Gender = Gender.Male,
-                    Department = new Department
-                    {
-                        DepartmentId =1,
-                        DepartmentName = "IT"
-                    },
+                    DepartmentId = 3,
                     PhotoPath = "images/waseem.png"
                 },
             };
