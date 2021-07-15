@@ -1,0 +1,20 @@
+applicationhost.config
+.vs
+packages
+*.cache
+
+# all bin folders
+bin
+
+#logs
+
+BlazorApplication/internallogs
+CompanyEmployees/logs
+
+#obj/Debug
+
+BlazorApplication/EmployeeManagement.Api/obj
+BlazorApplication/EmployeeManagement.Models/obj
+BlazorApplication/EmployeeManagement.Web/obj
+
+
