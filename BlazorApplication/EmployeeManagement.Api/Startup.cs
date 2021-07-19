@@ -31,6 +31,8 @@ namespace EmployeeManagement.Api
             {
                 options.UseSqlServer(Configuration.GetConnectionString("DBConnection"));
             });
+
+            services.AddScoped<IEmployeeRepository, EmployeeRepository>();
             services.AddControllers();
         }
 

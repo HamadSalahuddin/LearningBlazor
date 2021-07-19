@@ -23,23 +23,29 @@ namespace EmployeeManagement.Api.Models
             return employee;
         }
 
-        public async void DeleteEmployee(int employeeId)
+        public async Task<Employee> DeleteEmployee(int employeeId)
         {
-            var employee = dbContext.Employees
-                .FirstOrDefault(employee => employee.EmployeeId == employeeId);
+            var employee = await dbContext.Employees
+                .FirstOrDefaultAsync(employee => employee.EmployeeId == employeeId);
 
             if (employee != null)
             {
                 dbContext.Employees.Remove(employee);
                 await dbContext.SaveChangesAsync();
             }
-
+            return employee;
         }
 
         public async Task<Employee> GetEmployee(int employeeId)
         {
             return await dbContext.Employees
                 .FirstOrDefaultAsync(employee => employee.EmployeeId == employeeId);
+        }
+
+        public async Task<Employee> GetEmployeeByEmail(string email)
+        {
+            return await dbContext.Employees
+                .FirstOrDefaultAsync(employee => employee.Email == email);
         }
 
         public async Task<IEnumerable<Employee>> GetEmployees()

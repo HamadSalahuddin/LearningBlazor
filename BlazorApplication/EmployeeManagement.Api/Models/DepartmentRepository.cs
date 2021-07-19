@@ -12,7 +12,7 @@ namespace EmployeeManagement.Api.Models
 
         public DepartmentRepository(EmployeeManagementDbContext dbContext)
         {
-            this.dbContext = appDbContext;
+            this.dbContext = dbContext;
         }
 
         public Department GetDepartment(int departmentId)
