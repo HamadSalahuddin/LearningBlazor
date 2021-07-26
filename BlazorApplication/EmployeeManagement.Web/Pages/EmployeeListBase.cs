@@ -1,4 +1,5 @@
 ﻿using EmployeeManagement.Models;
+using EmployeeManagement.Web.Services;
 using Microsoft.AspNetCore.Components;
 using System;
 using System.Collections.Generic;
@@ -10,62 +11,17 @@ namespace EmployeeManagement.Web.Pages
 {
     public class EmployeeListBase : ComponentBase
     {
+        [Inject]
+        public IEmployeeService EmployeeService { get; set; }
         public IEnumerable<Employee> Employees { get; set; }
 
         protected override async Task OnInitializedAsync()
         {
-            await Task.Run(LoadEmployees);
+            Employees = (
+                await EmployeeService.GetEmployees()
+            )
+            .ToList();
         }
 
-        private void LoadEmployees()
-        {
-            Thread.Sleep(3000);
-            Employees = new List<Employee>
-            {
-                new Employee
-                {
-                    EmployeeId =1,
-                    FirstName ="Hamad",
-                    LastName = "Salahuddin",
-                    Email= "hamadsalahuddin@gmail.com",
-                    DateOfBirth = new DateTime(1980, 10, 5),
-                    Gender = Gender.Male,
-                    DepartmentId = 1,
-                    PhotoPath = "images/hamad.png"
-                },
-                new Employee
-                {
-                    EmployeeId =2,
-                    FirstName ="Sohail",
-                    LastName = "Khaliq",
-                    Email= "sohailkhaliq@gmail.com",
-                    DateOfBirth = new DateTime(1983, 10, 5),
-                    Gender = Gender.Male,
-                    DepartmentId = 2,
-                    PhotoPath = "images/sohail.png"
-                },
-                new Employee
-                {
-                    EmployeeId =3,
-                    FirstName ="Abid",
-                    LastName = "Akram",
-                    Email= "abidakram@gmail.com",
-                    DateOfBirth = new DateTime(1983, 10, 5),
-                    Gender = Gender.Male,
-                    DepartmentId =1,
-                    PhotoPath = "images/abid.jpg"
-                },new Employee
-                {
-                    EmployeeId =4,
-                    FirstName ="Waseem",
-                    LastName = "Maroof",
-                    Email= "waseemmaroof@gmail.com",
-                    DateOfBirth = new DateTime(1984, 10, 5),
-                    Gender = Gender.Male,
-                    DepartmentId = 3,
-                    PhotoPath = "images/waseem.png"
-                },
-            };
-        }
     }
 }
