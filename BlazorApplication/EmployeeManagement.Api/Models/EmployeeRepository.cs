@@ -39,6 +39,7 @@ namespace EmployeeManagement.Api.Models
         public async Task<Employee> GetEmployee(int employeeId)
         {
             return await dbContext.Employees
+                .Include(employee => employee.Department)
                 .FirstOrDefaultAsync(employee => employee.EmployeeId == employeeId);
         }
 

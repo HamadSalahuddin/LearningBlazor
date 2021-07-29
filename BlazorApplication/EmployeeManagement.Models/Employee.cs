@@ -27,6 +27,7 @@ namespace EmployeeManagement.Models
         public int DepartmentId { get; set; }
         [Column(TypeName = "Nvarchar(100)")]
         public string PhotoPath { get; set; }
+        public Department Department { get; set; }
 
     }
 }
