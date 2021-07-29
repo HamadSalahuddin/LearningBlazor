@@ -19,11 +19,20 @@ namespace EmployeeManagement.Web.Services
         }
         public async Task<IEnumerable<Employee>> GetEmployees()
         {
-            var employeeResponse = await httpClient.GetAsync("api/employees");
+            var employeesResponse = await httpClient.GetAsync("api/employees");
+            employeesResponse.EnsureSuccessStatusCode();
+
+            var responseString = await employeesResponse.Content.ReadAsStringAsync();
+            return JsonConvert.DeserializeObject<IEnumerable<Employee>>(responseString);
+        }
+
+        public async Task<Employee> GetEmployee(int id)
+        {
+            var employeeResponse = await httpClient.GetAsync($"api/employees/{id}");
             employeeResponse.EnsureSuccessStatusCode();
 
             var responseString = await employeeResponse.Content.ReadAsStringAsync();
-            return JsonConvert.DeserializeObject<IEnumerable<Employee>>(responseString);
+            return JsonConvert.DeserializeObject<Employee>(responseString);
         }
     }
 }
