@@ -1,0 +1,12 @@
+﻿@page "/databindingdemo"
+@inherits DatabindingDemoBase
+<h3>Two Way Data Binding</h3>
+<hr />
+<b>Description</b>
+<div>
+    <textarea @bind="Description" @bind:event="oninput" style="width:500px;">
+</textarea>
+</div>
+<div>
+    Count: @Description.Length
+</div>
