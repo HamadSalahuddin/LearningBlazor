@@ -33,6 +33,7 @@ namespace EmployeeManagement.Api
             });
 
             services.AddScoped<IEmployeeRepository, EmployeeRepository>();
+            services.AddScoped<IDepartmentRepository, DepartmentRepository>();
             services.AddControllers();
         }
 
