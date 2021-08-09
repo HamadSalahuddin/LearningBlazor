@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace EmployeeManagement.Web.Pages
+namespace Hamad.Components
 {
     public class CustomInputSelect<T> : InputSelect<T>
     {

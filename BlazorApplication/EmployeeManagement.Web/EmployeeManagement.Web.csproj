@@ -10,6 +10,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\BlazorApplication\EmployeeManagement.Models\EmployeeManagement.Models.csproj" />
+    <ProjectReference Include="..\Hamad.Components\Hamad.Components.csproj" />
   </ItemGroup>
 
 </Project>
