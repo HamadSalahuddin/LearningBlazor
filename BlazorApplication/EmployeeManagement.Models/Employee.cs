@@ -11,7 +11,7 @@ namespace EmployeeManagement.Models
         public int EmployeeId { get; set; }
 
         [Column(TypeName = "Nvarchar(100)")]
-        [Required]
+        [Required(ErrorMessage = "FirstName must be provided")]
         [StringLength(100, MinimumLength = 2)]
         public string FirstName { get; set; }
         [Column(TypeName = "Nvarchar(100)")]
@@ -19,6 +19,7 @@ namespace EmployeeManagement.Models
         public string LastName { get; set; }
         [Column(TypeName = "Nvarchar(100)")]
         [Required]
+        [EmailAddress]
         public string Email { get; set; }
 
         [Column(TypeName = "DateTime2")]
