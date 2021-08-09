@@ -32,7 +32,7 @@ namespace EmployeeManagement.Web
             services.AddHttpClient<IEmployeeService, EmployeeService>(configureClient =>
             {
                 configureClient.BaseAddress = new Uri("https://localhost:44327/");
-                
+
             }).ConfigurePrimaryHttpMessageHandler(() => new HttpClientHandler
             {
                 ClientCertificateOptions = ClientCertificateOption.Manual,
