@@ -1,4 +1,5 @@
-﻿using System;
+﻿using EmployeeManagement.Models.CustomValidators;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
@@ -20,6 +21,7 @@ namespace EmployeeManagement.Models
         [Column(TypeName = "Nvarchar(100)")]
         [Required]
         [EmailAddress]
+        [EmailDomainValidator(AllowDomain ="PragimTech.com")]
         public string Email { get; set; }
 
         [Column(TypeName = "DateTime2")]
