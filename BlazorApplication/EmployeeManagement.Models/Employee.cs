@@ -21,7 +21,10 @@ namespace EmployeeManagement.Models
         [Column(TypeName = "Nvarchar(100)")]
         [Required]
         [EmailAddress]
-        [EmailDomainValidator(AllowDomain ="PragimTech.com")]
+        [EmailDomainValidator(
+            AllowDomain ="PragimTech.com",
+            ErrorMessage ="Only PragimTech.com is allowed"
+        )]
         public string Email { get; set; }
 
         [Column(TypeName = "DateTime2")]

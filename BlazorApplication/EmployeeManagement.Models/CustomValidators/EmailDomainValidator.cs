@@ -15,10 +15,10 @@ namespace EmployeeManagement.Models.CustomValidators
                 .Split("@");
             if(strings[1].ToUpper() == AllowDomain.ToUpper())
             {
-                return null;
+                return ValidationResult.Success;
             }
             return new ValidationResult(
-                $"Domain must be {AllowDomain}",
+                ErrorMessage,
                 new[] { validationContext.MemberName }
             );
         }
