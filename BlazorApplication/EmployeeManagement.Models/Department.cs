@@ -1,4 +1,5 @@
 ﻿using System;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace EmployeeManagement.Models
@@ -7,6 +8,7 @@ namespace EmployeeManagement.Models
     {
         public int DepartmentId { get; set; }
         [Column(TypeName = "Nvarchar(100)")]
+        [Required]
         public string DepartmentName { get; set; }
 
     }
