@@ -13,7 +13,7 @@ namespace EmployeeManagement.Models.CustomValidators
             
             string[] strings = value.ToString()
                 .Split("@");
-            if(strings[1].ToUpper() == AllowDomain.ToUpper())
+            if(strings.Length > 1 && strings[1].ToUpper() == AllowDomain.ToUpper())
             {
                 return ValidationResult.Success;
             }

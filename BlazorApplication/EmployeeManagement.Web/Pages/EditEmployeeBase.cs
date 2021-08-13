@@ -1,4 +1,5 @@
 ﻿using EmployeeManagement.Models;
+using EmployeeManagement.Web.Models;
 using EmployeeManagement.Web.Services;
 using Microsoft.AspNetCore.Components;
 using System;
@@ -15,7 +16,8 @@ namespace EmployeeManagement.Web.Pages
         [Inject]
         public IDepartmentService DepartmentService { get; set; }
 
-        public Employee Employee { get; set; } = new Employee();
+        private Employee Employee { get; set; } = new Employee();
+        protected EmployeeEditModel EmployeeEditModel = new EmployeeEditModel();
         public List<Department> Departments { get; set; } = new List<Department>();
         public string DepartmentId { get; set; }
 
@@ -30,6 +32,18 @@ namespace EmployeeManagement.Web.Pages
             ).ToList();
 
             DepartmentId = Employee.DepartmentId.ToString();
+
+            EmployeeEditModel.EmployeeId = Employee.EmployeeId;
+            EmployeeEditModel.FirstName = Employee.FirstName;
+            EmployeeEditModel.LastName = Employee.LastName;
+            EmployeeEditModel.Email = Employee.Email;
+            EmployeeEditModel.ConfirmEmail = Employee.Email;
+            EmployeeEditModel.DateOfBirth = Employee.DateOfBirth;
+            EmployeeEditModel.Gender = Employee.Gender;
+            EmployeeEditModel.PhotoPath = Employee.PhotoPath;
+            EmployeeEditModel.DepartmentId = Employee.DepartmentId;
+            EmployeeEditModel.Department = Employee.Department;
+
         }
     }
 }
