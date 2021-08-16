@@ -1,3 +1,4 @@
+using EmployeeManagement.Web.Models;
 using EmployeeManagement.Web.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Components;
@@ -53,6 +54,8 @@ namespace EmployeeManagement.Web
                     return true;
                 }
             });
+
+            services.AddAutoMapper(typeof(EmployeeMapperProfile));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
