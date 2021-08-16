@@ -63,5 +63,10 @@ namespace EmployeeManagement.Web.Services
             var responseString = await employeeResponse.Content.ReadAsStringAsync();
             return JsonConvert.DeserializeObject<Employee>(responseString);
         }
+
+        public async Task DeleteEmployee(int Id)
+        {
+            await httpClient.DeleteAsync($"api/employees/{Id}");
+        }
     }
 }

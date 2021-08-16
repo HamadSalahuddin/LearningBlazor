@@ -70,5 +70,11 @@ namespace EmployeeManagement.Web.Pages
                 NavigationManager.NavigateTo("/");
             }
         }
+
+        protected async Task OnDeleteClick()
+        {
+            await EmployeeService.DeleteEmployee(EmployeeEditModel.EmployeeId);
+            NavigationManager.NavigateTo("/");
+        }
     }
 }
