@@ -33,5 +33,13 @@ namespace EmployeeManagement.Web.Pages
                 : SelectedEmployeeCount - 1;
         }
 
+        protected async Task DeletedEmployee(int deletedEmployeeId)
+        {
+            Employees = (
+                await EmployeeService.GetEmployees()
+            )
+            .ToList();
+        }
+
     }
 }
