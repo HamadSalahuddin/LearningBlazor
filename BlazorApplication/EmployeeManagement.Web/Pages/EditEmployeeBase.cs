@@ -2,6 +2,7 @@
 using EmployeeManagement.Models;
 using EmployeeManagement.Web.Models;
 using EmployeeManagement.Web.Services;
+using Hamad.Components;
 using Microsoft.AspNetCore.Components;
 using System;
 using System.Collections.Generic;
@@ -29,6 +30,7 @@ namespace EmployeeManagement.Web.Pages
         public List<Department> Departments { get; set; } = new List<Department>();
         public string DepartmentId { get; set; }
         public string PageTitle { get; set; }
+        public Confirm DeleteConfirmReference { get; set; }
 
         [Parameter]
         public string Id { get; set; }
@@ -71,10 +73,18 @@ namespace EmployeeManagement.Web.Pages
             }
         }
 
-        protected async Task OnDeleteClick()
+        protected void OnDeleteClick()
         {
-            await EmployeeService.DeleteEmployee(EmployeeEditModel.EmployeeId);
-            NavigationManager.NavigateTo("/");
+            DeleteConfirmReference.Show();
+        }
+
+        public async Task ConfirmDelete_Click(bool deleteConfirmed)
+        {
+            if (deleteConfirmed)
+            {
+                await EmployeeService.DeleteEmployee(EmployeeEditModel.EmployeeId);
+                NavigationManager.NavigateTo("/");
+            }
         }
     }
 }

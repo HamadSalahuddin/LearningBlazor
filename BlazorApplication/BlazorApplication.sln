@@ -9,7 +9,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EmployeeManagement.Web", "E
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EmployeeManagement.Api", "EmployeeManagement.Api\EmployeeManagement.Api.csproj", "{CB54738F-E29D-49D4-8019-4BA6C54BA48C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hamad.Components", "Hamad.Components\Hamad.Components.csproj", "{D9579AE3-5D2C-473D-8C2C-468627D0988C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hamad.Components", "Hamad.Components\Hamad.Components.csproj", "{D9579AE3-5D2C-473D-8C2C-468627D0988C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

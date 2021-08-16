@@ -1,5 +1,6 @@
 ﻿using EmployeeManagement.Models;
 using EmployeeManagement.Web.Services;
+using Hamad.Components;
 using Microsoft.AspNetCore.Components;
 using System;
 using System.Collections.Generic;
@@ -27,15 +28,25 @@ namespace EmployeeManagement.Web.Pages
         [Inject]
         public NavigationManager NavigationManager { get; set; }
 
+        protected Confirm DeleteConfirmReference { get; set; }
+
         protected async Task CheckBoxChanged(ChangeEventArgs e)
         {
             await OnEmployeeSelection.InvokeAsync((bool)e.Value);
         }
 
-        protected async Task OnDeleteClick()
+        protected void OnDeleteClick()
         {
-            await EmployeeService.DeleteEmployee(Employee.EmployeeId);
-            await OnEmployeeDelete.InvokeAsync(Employee.EmployeeId);
+            DeleteConfirmReference.Show();
+        }
+
+        protected async Task ConfirmDelete_Click(bool deleteConfirmed)
+        {
+            if (deleteConfirmed)
+            {
+                await EmployeeService.DeleteEmployee(Employee.EmployeeId);
+                await OnEmployeeDelete.InvokeAsync(Employee.EmployeeId);
+            }
         }
     }
 }
