@@ -28,6 +28,7 @@ namespace EmployeeManagement.Web.Pages
         protected EmployeeEditModel EmployeeEditModel = new EmployeeEditModel();
         public List<Department> Departments { get; set; } = new List<Department>();
         public string DepartmentId { get; set; }
+        public string PageTitle { get; set; }
 
         [Parameter]
         public string Id { get; set; }
@@ -35,6 +36,9 @@ namespace EmployeeManagement.Web.Pages
         protected override async Task OnInitializedAsync()
         {
             int.TryParse(Id, out int employeeId);
+            PageTitle = employeeId != 0
+                ? "Edit Employee"
+                : "Create Employee";
 
             Employee = employeeId != 0
                 ? await EmployeeService.GetEmployee(employeeId)
